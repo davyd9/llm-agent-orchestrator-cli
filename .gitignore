@@ -1,0 +1,39 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyd
+*.pyo
+
+# Virtual environment
+virtualenv/
+virtual-env/
+virtualenv-2.7/
+virtualenv-3.5/
+virtualenv-3.6/
+virtualenv-3.7/
+virtualenv-3.8/
+virtualenv-3.9/
+virtualenv-3.10/
+virtualenv-3.11/
+virtualenv-3.12/
+venv/
+env/
+.venv/
+
+# Editors
+.vscode/
+.idea/
+
+# OS generated files
+.DS_Store
+.Trashes
+thumbs.db
+
+# Environment variables
+.env
+
+# Logs
+*.log
+
+# Testing
+.pytest_cache/
