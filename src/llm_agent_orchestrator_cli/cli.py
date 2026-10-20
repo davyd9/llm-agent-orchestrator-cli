@@ -2,25 +2,23 @@ import click
 from dotenv import load_dotenv
 import os
 
-# Carrega variáveis de ambiente do arquivo .env
+# Load environment variables from .env file
 load_dotenv()
 
 @click.group()
-def cli():
-    """LLM Agent Orchestrator CLI"""
+def main():
+    """
+    LLM Agent Orchestrator CLI.
+    Orchestrates multiple LLMs and autonomous agents for complex tasks.
+    """
     pass
 
-@cli.command()
-@click.option('--name', default='World', help='Name to greet.')
-def hello(name):
-    """Says hello to the given name."""
-    click.echo(f"Hello, {name}!")
-    # Exemplo de como acessar uma variável de ambiente (se definida)
-    # api_key = os.getenv("OPENAI_API_KEY")
-    # if api_key:
-    #     click.echo("OpenAI API Key is loaded.")
-    # else:
-    #     click.echo("OpenAI API Key not found in environment.")
-
-if __name__ == '__main__':
-    cli()
+@main.command()
+def hello():
+    """
+    A simple hello command to test the CLI.
+    """
+    click.echo("Hello from LLM Agent Orchestrator CLI!")
+    # Example of accessing an environment variable
+    api_key = os.getenv("OPENAI_API_KEY", "Not Set")
+    click.echo(f"OPENAI_API_KEY (from .env): {api_key[:5]}...") # Show first few chars
